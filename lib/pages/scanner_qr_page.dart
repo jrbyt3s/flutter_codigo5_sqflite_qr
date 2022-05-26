@@ -82,10 +82,12 @@ class _ScannerQRPageState extends State<ScannerQRPage> {
     return Scaffold(
       body: Column(
         children: [
+          //Aqui colocamos el QR Scanner: _buildQrView(context)
           Expanded(
             flex: 4,
             child: _buildQrView(context),
           ),
+          //Container que contiene un titulo y el resultado del escaneo:
           Expanded(
             flex: 1,
             child: Container(
@@ -113,48 +115,47 @@ class _ScannerQRPageState extends State<ScannerQRPage> {
                       fontWeight: FontWeight.w500,
                     ),
                   ),
-                  const SizedBox(
-                    height: 12.0,
-                  ),
-                  SizedBox(
-                    width: double.infinity,
-                    height: 52.0,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        primary: kBrandPrimaryColor,
-                        // primary: Color(0xff04CD8B),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(14.0),
-                        ),
-                      ),
-                      onPressed: !isUrl
-                          ? () {
-                              Navigator.pop(context);
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => RegisterPage(
-                                    //url: _dataUrl;
-                                    url:
-                                        "https://carnetvacunacion.minsa.gob.pe/#publico/certificado/index?Tk=v3-J4cMCIPqW7QWLX5wFJPZiZTc637whHDP5NcoPhJXKxU=",
-                                  ),
-                                ),
-                              );
-                            }
-                          : null,
-                      child: const Text(
-                        "Registrar carnet",
-                        style: TextStyle(
-                          fontSize: 16.0,
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ),
-                    ),
-                  ),
+                  const SizedBox(height: 12.0),
                 ],
               ),
             ),
           ),
+          //Boton Ancho: con formato condicional a que si es un URL
+          SizedBox(
+            width: double.infinity,
+            height: 52.0,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                primary: kBrandPrimaryColor,
+                // primary: Color(0xff04CD8B),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(14.0),
+                ),
+              ),
+              onPressed: isUrl
+                  ? () {
+                      Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => RegisterPage(
+                            url: _dataUrl,
+                            //url: "https://carnetvacunacion.minsa.gob.pe/#publico/certificado/index?Tk=v3-J4cMCIPqW7QWLX5wFJPZiZTc637whHDP5NcoPhJXKxU=",
+                          ),
+                        ),
+                      );
+                    }
+                  : null,
+              child: const Text(
+                "Registrar carnet",
+                style: TextStyle(
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+            ),
+          ),
+          const SizedBox(height: 12.0),
         ],
       ),
     );
