@@ -146,6 +146,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Stack(
         children: [
+          //1er hijo del stack:
           Padding(
             padding: const EdgeInsets.all(14.0),
             child: Column(
@@ -157,6 +158,8 @@ class _HomePageState extends State<HomePage> {
                     fontSize: 16.0,
                   ),
                 ),
+                //Widget condicional a que si la lista "licences" esta vacia:
+                //Sino no esta vacia  se usar el refresh indicator con un listViewBuilder:
                 licenses.isNotEmpty
                     ? Expanded(
                         child: RefreshIndicator(
@@ -184,6 +187,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                       )
+                    //Si esta vacia Muestra una imagen de caja vacia centrada
                     : Center(
                         child: Column(
                           children: [
@@ -210,8 +214,11 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
+          //2do hijo del stack: un boton en la parte inferior
+          //Con el Aling Hacemos q se ubique en la parte inferior del stack
           Align(
             alignment: Alignment.bottomCenter,
+            //boton ancho:
             child: Container(
               height: 52.0,
               width: double.infinity,
