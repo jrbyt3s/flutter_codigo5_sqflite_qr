@@ -24,10 +24,21 @@ class _HomePageState extends State<HomePage> {
     getData();
   }
 
+  //Metodo para traer la data de la base de datos:
   getData() async {
     licenses = await DBAdmin.db.getLicenses2();
     setState(() {});
   }
+  //showDetail: Metodo para mostrar un PopPup: AlertDialog el cual contiene:
+  /*
+      Detalle del Carnet
+  nombres:
+    Megan rayan.
+  No DNI:
+  5645687
+  Codigo QR:
+    Imagen del QR (Centrado)
+  */
 
   showDetail(LicenseModel model) {
     showDialog(
@@ -106,6 +117,9 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ],
               ),
+              //La imagen del QR se genera y con QrImage() y se le envuelve en
+              //un gesture detector al cual con el metodo launchUrl()
+              //Hace un redireci[on al navegador web del movil con la URL que se codifica en el QR
               GestureDetector(
                 onTap: () {
                   final Uri _url = Uri.parse(model.url);
