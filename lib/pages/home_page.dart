@@ -117,7 +117,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ],
               ),
-              //La imagen del QR se genera y con QrImage() y se le envuelve en
+              //La imagen del QR se genera con QrImage() y se le envuelve en
               //un gesture detector al cual con el metodo launchUrl()
               //Hace un redireci[on al navegador web del movil con la URL que se codifica en el QR
               GestureDetector(
