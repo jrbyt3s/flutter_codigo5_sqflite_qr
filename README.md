@@ -5,41 +5,52 @@ A new Flutter project.
 ## ScreenShot:
 
 Intro Page:
-![Screenshot-intropage](/assets/screenshots/1-intropage.jpg)
+
+ChatPage:</br>
+<img src="assets/screenshots/1-intropage.jpg" width="30%"></br>
+
 
 
 Intro Homepage without Data: Is a conditional widget
 
-![Screenshot-homepage](/assets/screenshots/2-homepage-withoutData.jpg)
+ChatPage:</br>
+<img src="assets/screenshots/2-homepage-withoutData.jpg" width="30%"></br>
+
 
 
 Intro Page with data:
 
-![Screenshot-homepage](/assets/screenshots/3-homepage_withData.jpg)
+ChatPage:</br>
+<img src="assets/screenshots/3-homepage_withData.jpg" width="30%"></br>
+
 
 Intro Page QR Page:
 
-![Screenshot-scannnerPage](/assets/screenshots/4-sacannerQRpage.jpg)
+ChatPage:</br>
+<img src="assets/screenshots/4-sacannerQRpage.jpg" width="30%"></br>
+
 
 
 ScannerQRpage with active botton: 
+ChatPage:</br>
+<img src="assets/screenshots/5-sacannerQRpage-bottonActive.jpg" width="30%"></br>
 
-![Screenshot-scannerQRpage](/assets/screenshots/5-sacannerQRpage-bottonActive.jpg)
 
 
 Intro Register Page:
 
-![Screenshot-RegisterPage](/assets/screenshots/6-RegisterPage.jpg)
-
+ChatPage:</br>
+<img src="assets/screenshots/6-RegisterPage.jpg" width="30%"></br>
 
 ScannerQRpage SnacBar check save data:
 
-![Screenshot-scannerQRpage](/assets/screenshots/7-sacannerQRpage-snackBar-check.jpg)
-
+ChatPage:</br>
+<img src="assets/screenshots/7-sacannerQRpage-snackBar-check.jpg" width="30%"></br>
 
 Home Page, alert dialog for details :
 
-![Screenshot-homepage-alertDialog](/assets/screenshots/8-homepage-alertDialog-detail.jpg)
+ChatPage:</br>
+<img src="assets/screenshots/8-homepage-alertDialog-detail.jpg" width="30%"></br>
 
 ## Getting Started
 
